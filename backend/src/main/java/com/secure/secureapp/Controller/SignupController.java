@@ -1,6 +1,5 @@
 package com.secure.secureapp.Controller;
 
-import com.secure.secureapp.Models.UserModel;
 import com.secure.secureapp.Repository.UserRepository;
 import com.secure.secureapp.dto.SignupDTO;
 import com.secure.secureapp.dto.UserDTO;

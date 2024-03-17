@@ -1,8 +1,8 @@
 package com.secure.secureapp.Repository;
 
-import com.secure.secureapp.Models.OrderModel;
+import com.secure.secureapp.Models.Employer;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface OrderRepository extends JpaRepository<OrderModel, Long> {
-    OrderModel findFirstByEmailAndOrderNumber(String email,long orderNumber);
+public interface OrderRepository extends JpaRepository<Employer, Long> {
+    Employer findFirstByEmailAndOrderNumber(String email, long orderNumber);
 }

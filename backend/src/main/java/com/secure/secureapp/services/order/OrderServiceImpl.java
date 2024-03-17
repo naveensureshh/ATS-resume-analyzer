@@ -1,6 +1,6 @@
 package com.secure.secureapp.services.order;
 
-import com.secure.secureapp.Models.OrderModel;
+import com.secure.secureapp.Models.Employer;
 import com.secure.secureapp.Repository.OrderRepository;
 import com.secure.secureapp.dto.CreateOrderDTO;
 import com.secure.secureapp.dto.OrderDTO;
@@ -16,13 +16,13 @@ public class OrderServiceImpl implements OrderService{
     @Override
     public OrderDTO createOrder(CreateOrderDTO createOrderDTO)
     {
-        OrderModel orderModel=new OrderModel();
+        Employer orderModel=new Employer();
         orderModel.setOrderName(createOrderDTO.getOrderName());
         orderModel.setOrderDate(LocalDate.now());
         orderModel.setEmail(createOrderDTO.getEmail());
         orderModel.setPrice(createOrderDTO.getPrice());
         orderModel.setOrderNumber();
-        OrderModel createdOrder=orderRepository.save(orderModel);
+        Employer createdOrder=orderRepository.save(orderModel);
         OrderDTO orderDTO=new OrderDTO();
         orderDTO.setId(createdOrder.getId());
         orderDTO.setOrderName(createdOrder.getOrderName());
@@ -40,7 +40,7 @@ public class OrderServiceImpl implements OrderService{
         }
 
         // Retrieve the order from the repository
-        OrderModel orderModel = orderRepository.findFirstByEmailAndOrderNumber(email, orderNumber);
+        Employer orderModel = orderRepository.findFirstByEmailAndOrderNumber(email, orderNumber);
 
         if (orderModel == null) {
             return null; // Order not found

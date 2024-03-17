@@ -1,11 +1,8 @@
 package com.secure.secureapp.Controller;
 
-import com.secure.secureapp.Models.UserModel;
+import com.secure.secureapp.Models.Candidate;
 import com.secure.secureapp.dto.CreateOrderDTO;
 import com.secure.secureapp.dto.OrderDTO;
-import com.secure.secureapp.dto.SignupDTO;
-import com.secure.secureapp.dto.UserDTO;
-import com.secure.secureapp.services.auth.AuthService;
 import com.secure.secureapp.services.jwt.UserDetailsServiceImpl;
 import com.secure.secureapp.services.order.OrderService;
 import com.secure.secureapp.util.JwtUtil;
@@ -33,7 +30,7 @@ public class CreateOrderController {
 
     @PostMapping("/create-order")
     public ResponseEntity<?> createOrder(@RequestBody CreateOrderDTO createOrderDTO) {
-        UserModel user = userDetailsService.findByEmail(createOrderDTO.getEmail());
+        Candidate user = userDetailsService.findByEmail(createOrderDTO.getEmail());
 
         if (user == null) {
             // User does not exist, return an error response
