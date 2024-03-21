@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
-import {NgxMaskModule} from 'ngx-mask';
+import { NgxMaskModule} from 'ngx-mask';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { OrderDashboardComponent } from './pages/order-dashboard/order-dashboard.component';
