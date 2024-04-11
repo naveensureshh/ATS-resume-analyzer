@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './comp/login/login.component';
-import { DashboardComponent } from './comp/dashboard/dashboard.component';
-import { SignUpComponent } from './comp/sign-up/sign-up.component';
-import {OrderDashboardComponent} from './comp/order-dashboard/order-dashboard.component';
-import { ViewOrderComponent } from './comp/view-order/view-order.component';
-import { CreateOrderComponent } from './comp/create-order/create-order.component';
+import { LoginComponent } from './pages/login/login.component'
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { SignUpComponent } from './pages/sign-up/sign-up.component';
+import {OrderDashboardComponent} from './pages/order-dashboard/order-dashboard.component';
+import { ViewOrderComponent } from './pages/view-order/view-order.component';
+import { CreateOrderComponent } from './pages/create-order/create-order.component';
 import { AuthService} from './auth.service';
-import { ConfirmationComponent } from './comp/confirmation/confirmation.component';
+import { ConfirmationComponent } from './pages/confirmation/confirmation.component';
 
 
 const routes: Routes = [
