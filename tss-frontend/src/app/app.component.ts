@@ -4,16 +4,17 @@ import { HeaderComponent } from '../components/header/header.component';
 import { NavbarComponent } from '../components/navbar/navbar.component';
 import { JobPostingComponent } from '../components/job-posting/job-posting.component';
 import { FooterComponent } from '../components/footer/footer.component';
+import { response } from 'express';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ 
+  imports: [
     RouterOutlet,
-    HeaderComponent, 
-    NavbarComponent, 
-    FooterComponent, 
-    JobPostingComponent  ],
+    HeaderComponent,
+    NavbarComponent,
+    FooterComponent,
+    JobPostingComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
